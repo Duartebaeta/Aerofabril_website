@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.container {
+	width: 100%;
+	padding-top: 70px;
+	padding: inherit 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.clientes_container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: start;
+	justify-items: left;
+	padding-left: 70px;
+}
+
+.clientes_title {
+	font-size: 40px;
+	font-weight: 500;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: #000;
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-bottom: 60px;
+	margin-left: 80px;
+}
+
+.clientes_title::before {
+	content: '';
+	width: 24px;
+	height: 24px;
+	background-color: #CF0000;
+	position: absolute;
+	left: -30px;
+	border-radius: 50%;
+}
+.clientes_title::after {
+	content: '';
+	position: absolute;
+	width: 400px;
+	height: 4px;
+	background-image: linear-gradient(to right, #b4aaaa 5%, rgba(180, 170, 170, 0.83) 45%, rgba(180, 170, 170, 0.66) 70%, rgba(180, 170, 170, 0) 100%);
+	bottom: 0;
+}
+
+.clientes_aero {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.other_container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.portuario_container, .paineis_container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.aero_container,
+.port_content,
+.paineis_content {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.port_content > li,
+.paineis_content > li,
+.aero_container > li {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.port_content > li > span,
+.aero_container > li > span,
+.paineis_content > li > span {
+	color: #CF0000;
+	font-family: 'Inter', sans-serif;
+}
+
+.container_title {
+	width: fit-content;
+	font-size: 22px;
+	font-weight: 300;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	text-align: left;
+	color: #000;
+	border-bottom: 2px solid #CF0000;
+}
+
+@media screen and (max-width: 870px) {
+	.clientes_container {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+}

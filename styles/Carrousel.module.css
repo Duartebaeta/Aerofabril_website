@@ -1,0 +1,55 @@
+.car_container {
+	margin-top: 150px;
+	padding: 34px 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	overflow: hidden;
+}
+
+.car_title {
+	display: flex;
+	flex-direction: column;
+	padding-left: 59px;
+	gap: 10px;
+}
+
+.car_title > h3 {
+	width: fit-content;
+	font-size: 40px;
+	font-weight: normal;
+	border-bottom: 3px solid #CF0000;
+}
+
+.small_text {
+	width: fit-content;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.small_text > a {
+	text-decoration: none;
+	color: #CF0000;
+}
+
+.carrousel {
+	width: 100%;
+	height: 300px;
+	background-color: aqua;
+}
+
+.nav_button {
+	width: 211px;
+	height: 64px;
+	flex-grow: 0;
+	padding: 12px 12px 14px 15px;
+	border-radius: 11px;
+	background-color: #d63b3b;
+	align-self: end;
+	margin-top: 45px;
+	margin-right: 27px;
+	border: none;
+	color: #FAFAFA;
+	cursor: pointer;
+}

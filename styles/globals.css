@@ -1,26 +1,200 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Cobe Semi Bold";
+  src: url("../../fonts/Cobe-SemiBold/Cobe-SemiBold.woff2") format("woff2"), url("../../fonts/Cobe-SemiBold/Cobe-SemiBold.woff")
+      format("woff");
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Cobe Semi Bold", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  /* background-color: #FAFAFA; */
+}
+
+.hidden {
+  display: none !important;
+}
+
+.embla {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  height: 345px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla::before {
+  content: "";
+  position: absolute;
+  left: -105px;
+  height: calc(100% + 20px);
+  width: 200px;
+  background-image: linear-gradient(to right, #fafafa 71%, rgba(250, 250, 250, 0.77) 84%, rgba(250, 250, 250, 0.42) 94%, rgba(250, 250, 250, 0) 99%);
+  z-index: 2;
+}
+
+.embla::after {
+  content: "";
+  position: absolute;
+  right: -105px;
+  top: 0;
+  height: calc(100% + 20px);
+  width: 200px;
+  background-image: linear-gradient(to left, #fafafa 71%, rgba(250, 250, 250, 0.77) 84%, rgba(250, 250, 250, 0.42) 94%, rgba(250, 250, 250, 0) 99%);
+  z-index: 2;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+  gap: 30px;
+}
+
+.embla__slide {
+  position: relative;
+  width: 460px;
+  min-width: 5%;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.embla__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: 345px;
+}
+.embla__slide > div {
+  border: 3px solid black;
+}
+
+.embla__slide__img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  fill: #CF0000;
+  padding: 0;
+  z-index: 3;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.embla__button--prev {
+  left: 27px;
+}
+
+.embla__button--next {
+  right: 27px;
+}
+
+#__next {
+  height: 100%;
+}
+#map {
+  height: 100%;
+}
+
+.gmnoprint {
+  display: none;
+}
+
+.gm-bundled-control {
+  display: block;
+}
+
+.equipamentos_title {
+  margin-top: 229px;
+  margin-bottom: 100px;
+  font-size: 36px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  margin-left: 80px;
+  color: #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.equipamentos_title::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-color: #CF0000;
+  position: absolute;
+  left: -30px;
+  border-radius: 50%;
+}
+.equipamentos_title::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 4px;
+  background-image: linear-gradient(to right, #b4aaaa 5%, rgba(180, 170, 170, 0.83) 45%, rgba(180, 170, 170, 0.66) 70%, rgba(180, 170, 170, 0) 100%);
+  bottom: 0;
 }

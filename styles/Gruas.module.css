@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding: 0 60px;
+}
+
+.first_container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	gap: 94px;
+}
+.first_container > .img_container {
+	width: 500px;
+}
+
+.scnd_container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: 94px;
+}
+.scnd_container > .img_container {
+	width: 500px;
+}
+
+.grua_desc {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+.title {
+	color: #CF0000;
+	font-size: 24px;
+}
+.desc {
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	white-space: wrap;
+}
+.desc > p {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+.desc > p > span {
+	color: #CF0000;
+	font-family: 'Inter', sans-serif;
+}
+.img_container {
+	border: 3px solid black;
+
+}
+.img_container_t {
+	border: 3px solid black;
+	width: 489px;
+}
+
+@media screen and (max-width: 995px) {
+	.first_container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.scnd_container {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+	.container {
+		row-gap: 90px;
+	}
+}
+@media screen and (max-width: 545px) {
+	.img_container {
+		width: 300px !important;
+	}
+	.img_container_t {
+		width: 300px !important;
+	}
+}

@@ -1,0 +1,25 @@
+/* .banner_container {
+	position: relative;
+	top: 114px;
+	width: 100vw;
+	height: 600px;
+	background-image: url('../public/banner/aerofabril.jpeg');
+	background-size: contain;
+	background-repeat: no-repeat;
+} */
+
+.heroWrapper {
+	position: relative;
+	width: 100%;
+	height: 50vh;
+	top: 114px;
+}
+
+/* 
+.heroContent {
+	position: relative;
+	height: 121px;
+	top: 40vh;
+	background: rgb(250, 250, 250);
+	background: linear-gradient(0deg, rgba(250, 250, 250,0.96) 27%, rgba(250, 250, 250,0) 100%);
+} */

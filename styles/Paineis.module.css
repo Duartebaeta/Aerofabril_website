@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: flex-start;
+	align-content: center;
+	justify-items: center;
+	row-gap: 120px;
+	padding: 0 55px;
+}
+
+.painel {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	width: 100%;
+}
+
+.desc {
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.desc > p {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+}
+
+.desc > p > span {
+	color: #CF0000;
+	font-family: 'Inter', sans-serif;
+}
