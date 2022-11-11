@@ -3,6 +3,8 @@ import style from '../styles/Clientes.module.css'
 
 function Clientes() {
   return (
+	<>
+	<p className={style.invis_anchor} id="clientes"></p>
 	<div className={style.container}>
 		<span className={style.clientes_title}>Os nossos clientes</span>
 		<section className={style.clientes_container}>
@@ -55,6 +57,7 @@ function Clientes() {
 			</div>
 		</section>
 	</div>
+	</>
   )
 }
 

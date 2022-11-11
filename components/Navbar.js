@@ -14,9 +14,9 @@ const Navbar = () => {
 			</div>
 			<section className={styles.hotlinks_container}>
 				<ul className={styles.hotlinks_list}>
-					<li>Sobre Nós</li>
-					<li>Equipamentos</li>
-					<li>Clientes</li>
+					<Link href={'/#about'}><li>Sobre Nós</li></Link>
+					<Link href={'/equipamentos'}><li>Equipamentos</li></Link>
+					<Link href={'/equipamentos/#clientes'}><li>Clientes</li></Link>
 				</ul>
 				<div className={styles.hamb}>
 					<motion.ul className={styles.hamb_btn}
@@ -76,9 +76,9 @@ const Navbar = () => {
 		}}
 		transition={{ duration: .4, type: "tween" }}
 		>
-			<li><Link href="/about">Sobre Nós</Link></li>
-			<li><Link href="/equipamentos">Equipamentos</Link></li>
-			<li><Link href="/clientes">Clientes</Link></li>
+			<Link href={'/#about'}><li>Sobre Nós</li></Link>
+			<Link href={'/equipamentos'}><li>Equipamentos</li></Link>
+			<Link href={'/equipamentos/#clientes'}><li>Clientes</li></Link>
 		</motion.ul>
 		</>
 	 );
