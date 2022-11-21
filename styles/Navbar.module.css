@@ -22,6 +22,7 @@
 	align-self: center;
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 }
 
 .image_wrapper > img {
@@ -86,17 +87,16 @@
 }
 
 .hamb_menu {
+	display: none;
 	position: fixed;
 	z-index: 9;
 	top: 114px;
 	width: 100vw;
-	display: flex;
 	flex-direction: column;
 	gap: 15px;
 	list-style: none;
 	background-color: #f7f7f7;
-	padding: 20px 0;
-	display: flex;
+	padding: 20px 15px;
 }
 
 .hamb_menu > li {
@@ -119,6 +119,9 @@
 		display: none !important;
 	}
 	.hamb {
+		display: flex;
+	}
+	.hamb_menu {
 		display: flex;
 	}
 }

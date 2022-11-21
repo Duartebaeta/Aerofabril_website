@@ -27,6 +27,8 @@ const EmblaCarousel = ({ slides }) => {
     onSelect();
   }, [embla, onSelect]);
 
+  	if (typeof(window) !== 'undefined')
+  		var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 	return (
 	<div className="embla">
 		<div className="embla__viewport" ref={viewportRef}>
@@ -34,7 +36,7 @@ const EmblaCarousel = ({ slides }) => {
 			{slides.map((index) => (
 			<div className="embla__slide" key={index}>
 				<div className={["embla__slide__inner"]}>
-					<Image src={"/static/equipment/" + index + ".jpg"} alt="equipment pictures" width={460} height={345} layout="intrinsic"/>
+					<Image src={"/static/equipment/" + index + ".jpg"} alt="equipment pictures" width={460} height={345} layout={width <= 560 ? "responsive" : "intrinsic"}/>
 				</div>
 			</div>
 			))}

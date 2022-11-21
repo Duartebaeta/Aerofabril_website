@@ -116,3 +116,53 @@
 		gap: 30px;
 	}
 }
+
+@media screen and (max-width: 648px) {
+
+	.clientes_title {
+		margin-left: 40px;
+		margin-bottom: 40px;
+	}
+	.clientes_title{
+		font-size: 30px;
+	}
+	.clientes_title::after {
+		width: 280px;
+	}
+	.aero_container,
+	.port_content,
+	.paineis_content {
+		white-space: wrap;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.clientes_container {
+		padding-left: 35px;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	.clientes_title {
+	  margin-left: auto;
+	  margin-right: auto;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	.clientes_title {
+	  font-size: 28px;
+	  border-radius: 6px;
+	  border-bottom: 3px solid #CF0000;
+	}
+	.clientes_title::before {
+	  display: none;
+	}
+	.clientes_title::after {
+	  display: none;
+	}
+
+	.clientes_container {
+		padding: 0 15px;
+	}
+  }

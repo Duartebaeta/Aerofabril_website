@@ -2,13 +2,15 @@
 
 .container {
 	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
 	align-content: center;
 	justify-items: center;
 	row-gap: 120px;
+	column-gap: 100px;
 	padding: 0 55px;
 }
 
@@ -18,7 +20,9 @@
 	justify-content: center;
 	justify-items: center;
 	align-items: center;
-	width: 100%;
+}
+.img_container img {
+	border: 2px solid black !important;
 }
 
 .desc {

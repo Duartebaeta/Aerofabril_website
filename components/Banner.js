@@ -1,7 +1,7 @@
 import styles from "../styles/Banner.module.css"
 import Image from "next/image"
 
-const IMAGE_URL = '/static/banner/aerofabril.jpeg';
+const IMAGE_URL = '/static/banner/banner.jpg';
 
 function Banner() {
 	return (

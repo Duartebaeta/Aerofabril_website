@@ -22,6 +22,21 @@
 	border-bottom: 2px solid #CF0000;
 }
 
+.top_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top_row div {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+	padding-right: 30px;
+}
+
 .footer_content {
 	display: flex; 
 	flex-direction: row;
@@ -97,5 +112,23 @@
 @media screen and (max-width: 835px) {
 	.footer_content {
 		flex-wrap: wrap;
+	}
+	.footer_map {
+		width: 100%;
+	}
+	.top_row div {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.footer {
+		padding: 20px 20px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.info_box {
+		white-space: unset;
 	}
 }

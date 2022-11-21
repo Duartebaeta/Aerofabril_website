@@ -1,12 +1,16 @@
 import React from 'react'
 import style from '../styles/Paineis.module.css'
 import Image from 'next/image'
+import { useRouter } from 'next/router';
+import { en_paineis, pt_paineis } from '../translations';
 
 const panelCount = 6;
 const panels = Array.from(Array(panelCount).keys());
-const desc = [["Painel Publicitário Rotativo", "Com quatro faces de 8x6 metros", "Coluna de 12 metros"], ["Painel Publicitário Fixo", "Com dupla face, tendo cada face 11x5 metros", "Coluna de 12 metros"], ["Painel Publicitário Fixo", "Com tripla face (triangular), tendo cada face 11 x 5 metros", "Coluna de 24 metros"], ["Painel Publicitário Cafés Delta"], ["Painel Publicitário Fixo", "Com tripla face (triangular), tendo cada face 11x5 metros", "Coluna de 24 metros"], ["Painel Publicitário Fixo, com publicidade rotativa", "Dupla Face, tendo cada face 20 x 6 metros", "Duas colunas com 12 metros"]]
 
 function Paineis() {
+	const router = useRouter();
+	const { locale } = router;
+	const info = locale === 'en' ? en_paineis : pt_paineis;
 	return (
 		<>
 			<section className={style.container}>
@@ -16,7 +20,7 @@ function Paineis() {
 						<Image src={'/static/paineis/' + (index + 1) + '_md.jpg'} alt="painel" width={320} height={320} layout=""/>
 					</div>
 					<div className={style.desc}>
-					{ [...Array(desc[index].length)].map((_, i) =><p key={i}><span>-{'>'}</span>{desc[index][i]}</p>) }
+					{ [...Array(info[index].desc.length)].map((_, i) =><p key={i}><span>-{'>'}</span>{info[index].desc[i]}</p>) }
 					</div>
 				</div>
 			))}

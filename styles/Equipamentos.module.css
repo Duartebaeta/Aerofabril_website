@@ -3,9 +3,17 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 70px;
+	width: 100%;
+}
+
+.selector_row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
 	gap: 95px;
-	margin-bottom: 70px;
 	width: 100%;
 }
 
@@ -34,12 +42,76 @@
 	color: #000;
 }
 
+.selector_column {
+	display: none;
+	flex-direction: column;
+	position: relative;
+}
+.page {
+	padding: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+}
+.page p {
+	font-size: 20px;
+}
+.arrow {
+	position: absolute;
+	right: -15px;
+	top: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: rotate(180deg);
+	transition: all 0.2s ease-in-out;
+}
+.arrow img {
+	filter: invert(10%) sepia(100%) saturate(5836%) hue-rotate(350deg) brightness(79%) contrast(135%);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid gray;
+	
+	width: 100%;
+}
+.list p {
+	width: 100%;
+	padding: 10px;
+	white-space: nowrap;
+	text-align: center;
+	font-size: 18px;
+	cursor: pointer;
+}
+.current {
+	color: #f84646;
+}
+.hidden {
+	display: none;
+}
+
 @media screen and (max-width: 875px) {
 	.selector_box > p {
 		font-size: 20px;
 	}
-	.selector_container {
-		row-gap: 20px;
-		flex-direction: column;
+	.selector_row {
+		display: none;
 	}
+	.selector_column {
+		display: flex;
+	}
+	.selector_container {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 648px) {
+	
 }
